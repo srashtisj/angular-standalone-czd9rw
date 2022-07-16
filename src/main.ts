@@ -7,7 +7,7 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { MatCardModule } from '@angular/material/card';
 import { ImageComponent } from './app/image.component';
 import { HighlightDirective } from './app/highlight.directive';
-import { FormComponent, FormModule } from './app/form/form.component';
+import { LoginModule } from './app/login/login.component';
 
 @Component({
   selector: 'app-root',
@@ -19,10 +19,10 @@ import { FormComponent, FormModule } from './app/form/form.component';
     // or NgModules like Angular Material
     CommonModule,
     MatCardModule,
-    FormModule
+    LoginModule,
   ],
   template: `
-    <app-form></app-form>
+    <app-login></app-login>
     <mat-card *ngIf="url">
       <app-image-component [url]="url"></app-image-component>
       <h2 app-highlight>{{name | titlecase}}</h2>
